@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Invitation aux fiançailles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            font-family: 'Playfair Display', 'Noto Serif SC', serif;
+        }
+
+        .card-wrapper {
+            width: 100%;
+            max-width: 420px;
+            padding: 16px;
+        }
+
+        .card {
+            position: relative;
+            background: #8b0000; /* rouge foncé élégant */
+            color: #f9e6b5;
+            padding: 32px 26px 40px;
+            border-radius: 18px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            overflow: hidden;
+        }
+
+        /* Bordures décoratives */
+        .card::before,
+        .card::after {
+            content: '';
+            position: absolute;
+            inset: 14px;
+            border: 1px solid rgba(249,230,181,0.4);
+            pointer-events: none;
+        }
+
+        .corner {
+            position: absolute;
+            width: 46px;
+            height: 46px;
+            border: 2px solid #f9e6b5;
+        }
+        .corner.tl { top: 18px; left: 18px; border-right: none; border-bottom: none; }
+        .corner.tr { top: 18px; right: 18px; border-left: none; border-bottom: none; }
+        .corner.bl { bottom: 18px; left: 18px; border-right: none; border-top: none; }
+        .corner.br { bottom: 18px; right: 18px; border-left: none; border-top: none; }
+
+        /* Fleur en fond (option simple avec gradient) */
+        .bg-circle {
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            border: 1px solid rgba(249,230,181,0.18);
+            top: -80px;
+            right: -60px;
+        }
+
+        .double-happiness {
+            position: absolute;
+            bottom: 22px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            border: 2px solid #f9e6b5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Noto Serif SC', serif;
+            font-size: 22px;
+        }
+
+        .top-big-zh {
+            position: absolute;
+            top: 70px;
+            left: 34px;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            font-family: 'Noto Serif SC', serif;
+            font-size: 34px;
+            letter-spacing: 6px;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .names-fr {
+            margin-top: 20px;
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+
+        .intro-fr {
+            margin-top: 20px;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .datetime-block {
+            margin-top: 28px;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .datetime-block .date {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .place-block {
+            margin-top: 18px;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .section-title {
+            margin-top: 14px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* Version chinoise */
+        .cn-block {
+            margin-top: 26px;
+            font-family: 'Noto Serif SC', serif;
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        .cn-names {
+            margin-top: 6px;
+            font-size: 14px;
+        }
+
+        .cn-small {
+            font-size: 12px;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 26px 20px 34px;
+            }
+            .top-big-zh {
+                top: 60px;
+                left: 20px;
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="card-wrapper">
+    <div class="card">
+        <div class="corner tl"></div>
+        <div class="corner tr"></div>
+        <div class="corner bl"></div>
+        <div class="corner br"></div>
+        <div class="bg-circle"></div>
+
+        <!-- Grand titre chinois vertical : 订婚喜宴 -->
+        <div class="top-big-zh">订婚喜宴</div>
+
+        <div class="content">
+            <!-- Français -->
+            <div class="names-fr">
+                Fiançailles de DAI Céline &amp; XU Léo
+            </div>
+
+            <div class="intro-fr">
+                Nous avons la joie de vous inviter<br>
+                à venir partager ce moment important de notre vie<br>
+                et célébrer notre bonheur à vos côtés.
+            </div>
+
+            <div class="datetime-block">
+                <div class="date">
+                    Samedi 25 avril 2026
+                </div>
+            </div>
+
+            <div class="place-block">
+                <div class="section-title">Séance photo – 9h00</div>
+                Mairie du 5<sup>e</sup> arrondissement<br>
+                21, place du Panthéon, 75005 Paris
+            </div>
+
+            <div class="place-block">
+                <div class="section-title">Mariage civil – 10h00</div>
+                Mairie du 5<sup>e</sup> arrondissement<br>
+                21, place du Panthéon, 75005 Paris
+            </div>
+
+            <div class="place-block">
+                <div class="section-title">Cérémonie religieuse – 11h30</div>
+                Église de Pantin<br>
+                102 avenue Jean Jaurès, 93500 Pantin
+            </div>
+
+            <!-- Version chinoise simplifiée -->
+            <div class="cn-block">
+                <div>我们诚挚地邀请</div>
+                <div>亲爱的家人和朋友</div>
+                <div>前来见证我们的幸福与喜悦</div>
+
+                <div class="cn-names">
+                    <strong>戴 Céline &nbsp; 徐 Léo 订婚喜宴</strong>
+                </div>
+
+                <div style="margin-top:8px;">
+                    公历 2026 年 4 月 25 日 星期六
+                </div>
+
+                <div class="cn-small" style="margin-top:10px;">
+                    9:00&nbsp; 巴黎第五区区政府前合影<br>
+                    地址：21 Pl. du Panthéon, 75005 Paris
+                </div>
+
+                <div class="cn-small" style="margin-top:8px;">
+                    10:00&nbsp; 民事婚礼<br>
+                    地点：巴黎第五区区政府
+                </div>
+
+                <div class="cn-small" style="margin-top:8px;">
+                    11:30&nbsp; 教堂仪式<br>
+                    地址：Église de Pantin，102 avenue Jean Jaurès, 93500 Pantin
+                </div>
+            </div>
+        </div>
+
+        <!-- 囍 au centre bas -->
+        <div class="double-happiness">囍</div>
+    </div>
+</div>
+</body>
+</html>
